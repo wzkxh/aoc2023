@@ -38,5 +38,3 @@ def range_trace(x1,x2,l): # recursively trace seed through the map at level l
   return range_trace(x1,x2,l+1)
 
 print(min(range_trace(s[i],s[i]+s[i+1],0) for i in range(0,len(s),2)))
-
-#print(81956384) # 46 81956384
