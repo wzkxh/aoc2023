@@ -32,8 +32,7 @@ def range_trace(x1,x2,l): # recursively trace seed through the map at level l
       if x2<r1: return x1
       return min(x1,range_trace(r1,x2,l))
     if x1<r2:
-      if x2<r2: return range_trace(d+(x1-r1),d+(x2-r1),l+1)
-      if x2==r2: return range_trace(d+(x1-r1),d+(r2-r1),l+1)
+      if x2<=r2: return range_trace(d+(x1-r1),d+(x2-r1),l+1)
       return min(range_trace(d+(x1-r1),d+(r2-r1),l+1), range_trace(r2,x2,l))
   return range_trace(x1,x2,l+1)
 
