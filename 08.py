@@ -2,7 +2,7 @@ from math import lcm
 
 lines = open("08.dat","rt").read().splitlines()
 
-c = '' # code
+c = '' # code/commands
 d = {} # directions
 for l in lines:
   if not c: c = l; continue
@@ -18,8 +18,10 @@ def run(p):
 
 print(run('AAA'))
 
-r = 1
-for p in d.keys():
-  if p.endswith("A"):
-    r = lcm(r,run(p))
-print(r)
+#r = 1
+#for p in d.keys():
+#  if p.endswith("A"):
+#    r = lcm(r,run(p))
+#print(r)
+
+print(lcm(*(run(p) for p in d.keys() if p[2]=="A")))
