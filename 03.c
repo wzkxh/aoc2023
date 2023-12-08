@@ -26,7 +26,6 @@ int main() __ int n; // lines are 0,1..140,141=n; each 142=m chars
   for(n=1;fgets(&t[n][1],N-1,fp);++n) t[n][0]=strchr(&t[n][1],'\n')[0]='.';
   fclose(fp);
   int m=strlen(t[1]); memset(t,'.',m); t[0][m]='\0'; strcpy(t[n],t[0]);
-
   int fk[1000]; // dictionary - fk,fv,fn:  found gears, or rather first number
   int fv[1000]; // (369 items in my case)  of it (i,j)->n
   int fn=0; // length of fk:fv
@@ -50,6 +49,5 @@ int main() __ int n; // lines are 0,1..140,141=n; each 142=m chars
               if(x>=0) s2+=fv[x]*v; // then accumulate product for part 2
               else { fk[fn]=k; fv[fn]=v; ++fn; } // else add to dictionary
               k=0; _ _
-          n=0; _ _ _
-  }
+          n=0; _ _ _ _
   printf("%d %d\n",s1,s2); _
