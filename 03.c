@@ -6,7 +6,7 @@
 #define __ {  // pythonize syntax
 #define _ }
 
-char t[N][N]; // yes, static and global :) must be enough for this task
+char t[N][N]; // yes, static and global :) must be enough here
 
 int in_d(int k,int* kk,int n) __ // search in "dictionary"
   for(int i=0;i<n;++i)
